@@ -9,4 +9,14 @@ public class Caminho {
         this.rota = rota;
         this.distanciaTotal = distanciaTotal;
     }
+
+    public List<Capital> getRota() {
+        return rota;
+    }
+
+    public int getDistanciaTotal() {
+        return distanciaTotal;
+    }
+
+    
 }

@@ -8,4 +8,13 @@ public class Aresta {
         this.destino = destino;
         this.distancia = distancia;
     }
+
+    public Capital getDestino() {
+        return destino;
+    }
+
+    public int getDistancia() {
+        return distancia;
+    }
+
 }

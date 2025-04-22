@@ -1,8 +1,10 @@
 import Class.Capital;
 import Class.Aresta;
 import Class.Caminho;
-import Java.util*;
+import java.util.*;
 
-público class executor {
-  public static vida mais(String[] args)
+public class Executor {
+  public static void main(String[] args) {
+
+  }
 }
