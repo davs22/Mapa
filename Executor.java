@@ -1,7 +1,6 @@
 import Class.Capital;
-import Class.Aresta;
 import Class.Caminho;
-import java.util.*;
+import java.util.List;
 
 public class Executor {
     public static void main(String[] args) {
@@ -21,12 +20,15 @@ public class Executor {
     
     System.out.println("Menor caminho de " + origem + " até " + destino + ":");
     
-    for (int i = 0; i < caminho.getCapitais().size(); i++) {
-      System.out.print(caminho.getCapitais().get(i));
-      if (i < caminho.getCapitais().size() - 1); {
+    List<Capital> listaCapitais = caminho.getCapitais();
+    int distanciatotal = caminho.getDistancia();
+
+    for (int i = 0; i < listaCapitais.size(); i++) {
+      System.out.print(listaCapitais.get(i));
+      if (i < listaCapitais.size() - 1) {
       System.out.print(" --> ");
       }
      }
-    System.out.println("\nDistância total: " + caminho.getDistancia());
+    System.out.println("\nDistância total: " + distanciatotal);
     }
-   }
+  }

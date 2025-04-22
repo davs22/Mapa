@@ -18,5 +18,15 @@ public class Caminho {
         return distanciaTotal;
     }
 
+    public List<Capital> getCapitais() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCapitais'");
+    }
+
+    public int getDistancia() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDistancia'");
+    }
+
     
 }
