@@ -1,5 +1,7 @@
 package Class;
 
+import java.text.Normalizer;
+
 public enum Capital {
     VITORIA("Vitória"),
     RIO_BRANCO("Rio Branco"),
@@ -17,7 +19,6 @@ public enum Capital {
     GOIANIA("Goiânia"),
     BELEM("Belém");
 
-
     private final String nome;
 
     Capital(String nome) {
@@ -29,11 +30,16 @@ public enum Capital {
     }
 
     public static Capital fromNome(String nome) {
+        String nomeNormalizado = Normalizer.normalize(nome.trim().toLowerCase(), Normalizer.Form.NFD)
+        .replaceAll("[^\\p{ASCII}]", "");
         for (Capital c : values()) {
-            if (c.getNome().equalsIgnoreCase(nome)) {
+            String capitalNormalizada = Normalizer.normalize(c.getNome().toLowerCase(), Normalizer.Form.NFD)
+             .replaceAll("[^\\p{ASCII}]", "");
+            if (capitalNormalizada.equals(nomeNormalizado)) {
                 return c;
             }
         }
         return null;
     }
+    
 }
