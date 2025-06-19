@@ -1,6 +1,4 @@
-import Class.Aresta;
-import Class.Capital;
-import Class.Caminho;
+package Class;
 
 import java.util.*;
 
@@ -25,7 +23,6 @@ public class Grafo {
 
         while (!fila.isEmpty()) {
             Capital atual = fila.poll();
-
             for (Aresta aresta : adjacencias.getOrDefault(atual, new ArrayList<>())) {
                 int novaDistancia = distancias.get(atual) + aresta.getDistancia();
                 if (novaDistancia < distancias.get(aresta.getDestino())) {
@@ -43,5 +40,9 @@ public class Grafo {
         Collections.reverse(caminho);
 
         return new Caminho(caminho, distancias.get(destino));
+    }
+
+    public Map<Capital, List<Aresta>> getAdjacencias() {
+        return adjacencias;
     }
 }

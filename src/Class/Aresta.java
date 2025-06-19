@@ -1,8 +1,8 @@
 package Class;
 
 public class Aresta {
-    public final Capital destino;
-    public final int distancia;
+    private final Capital destino;
+    private final int distancia;
 
     public Aresta(Capital destino, int distancia) {
         this.destino = destino;
@@ -16,5 +16,4 @@ public class Aresta {
     public int getDistancia() {
         return distancia;
     }
-
 }
