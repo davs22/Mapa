@@ -1,9 +1,9 @@
 package Class;
 
 public enum Capital {
-    BRASILIA("Brasília", "DF", 520, 500),
+    BRASILIA("Brasília", "DF", 655, 541),
     SAO_PAULO("São Paulo", "SP", 550, 600),
-    RIO_DE_JANEIRO("Rio de Janeiro", "RJ", 600, 580),
+    RIO_DE_JANEIRO("Rio de Janeiro", "RJ", 756, 730),
     BELO_HORIZONTE("Belo Horizonte", "MG", 570, 540),
     SALVADOR("Salvador", "BA", 680, 460),
     MACEIO("Maceió", "AL", 730, 420),
@@ -14,9 +14,9 @@ public enum Capital {
     SAO_LUIS("São Luís", "MA", 670, 300),
     TERESINA("Teresina", "PI", 690, 340),
     ARACAJU("Aracaju", "SE", 700, 440),
-    VITORIA("Vitória", "ES", 620, 570),
+    VITORIA("Vitória", "ES", 835, 652),
     GOIANIA("Goiânia", "GO", 500, 520),
-    CUIABA("Cuiabá", "MT", 459, 530),
+    CUIABA("Cuiabá", "MT", 459, 540),
     CAMPO_GRANDE("Campo Grande", "MS", 490, 670),
     MANAUS("Manaus", "AM", 360, 230),
     BOA_VISTA("Boa Vista", "RR", 340, 80),
@@ -25,7 +25,7 @@ public enum Capital {
     BELEM("Belém", "PA", 650, 180),
     MACAPA("Macapá", "AP", 583, 147),
     PALMAS("Palmas", "TO", 570, 360),
-    CURITIBA("Curitiba", "PR", 550, 680),
+    CURITIBA("Curitiba", "PR", 630, 842),
     FLORIANOPOLIS("Florianópolis", "SC", 540, 730),
     PORTO_ALEGRE("Porto Alegre", "RS", 520, 800);
 
