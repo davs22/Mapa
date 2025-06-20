@@ -18,7 +18,7 @@ public enum Capital {
     GOIANIA("Goiânia", "GO", 500, 520),
     CUIABA("Cuiabá", "MT", 420, 520),
     CAMPO_GRANDE("Campo Grande", "MS", 430, 600),
-    MANAUS("Manaus", "AM", 300, 200),
+    MANAUS("Manaus", "AM", 360, 230),
     BOA_VISTA("Boa Vista", "RR", 340, 80),
     PORTO_VELHO("Porto Velho", "RO", 290, 300),
     RIO_BRANCO("Rio Branco", "AC", 230, 330),
