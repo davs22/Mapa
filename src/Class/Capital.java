@@ -25,8 +25,8 @@ public enum Capital {
     BELEM("Belém", "PA", 650, 180),
     MACAPA("Macapá", "AP", 583, 147),
     PALMAS("Palmas", "TO", 570, 360),
-    CURITIBA("Curitiba", "PR", 630, 842),
-    FLORIANOPOLIS("Florianópolis", "SC", 540, 730),
+    CURITIBA("Curitiba", "PR", 613, 782),
+    FLORIANOPOLIS("Florianópolis", "SC", 630, 842),
     PORTO_ALEGRE("Porto Alegre", "RS", 520, 800);
 
     private final String nome;
