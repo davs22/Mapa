@@ -5,14 +5,14 @@ public enum Capital {
     SAO_PAULO("São Paulo", "SP", 550, 600),
     RIO_DE_JANEIRO("Rio de Janeiro", "RJ", 756, 730),
     BELO_HORIZONTE("Belo Horizonte", "MG", 570, 540),
-    SALVADOR("Salvador", "BA", 680, 460),
+    SALVADOR("Salvador", "BA", 883, 481),
     MACEIO("Maceió", "AL", 730, 420),
     RECIFE("Recife", "PE", 760, 400),
     JOAO_PESSOA("João Pessoa", "PB", 770, 380),
     NATAL("Natal", "RN", 780, 360),
     FORTALEZA("Fortaleza", "CE", 750, 320),
-    SAO_LUIS("São Luís", "MA", 670, 300),
-    TERESINA("Teresina", "PI", 690, 340),
+    SAO_LUIS("São Luís", "MA", 740, 234),
+    TERESINA("Teresina", "PI", 791, 283),
     ARACAJU("Aracaju", "SE", 700, 440),
     VITORIA("Vitória", "ES", 835, 652),
     GOIANIA("Goiânia", "GO", 500, 520),
@@ -27,7 +27,7 @@ public enum Capital {
     PALMAS("Palmas", "TO", 570, 360),
     CURITIBA("Curitiba", "PR", 613, 782),
     FLORIANOPOLIS("Florianópolis", "SC", 630, 842),
-    PORTO_ALEGRE("Porto Alegre", "RS", 520, 800);
+    PORTO_ALEGRE("Porto Alegre", "RS", 570, 900);
 
     private final String nome;
     private final String sigla;
