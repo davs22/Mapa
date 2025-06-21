@@ -14,7 +14,7 @@ public enum Capital {
     SAO_LUIS("São Luís", "MA", 752, 222),
     TERESINA("Teresina", "PI", 791, 283),
     ARACAJU("Aracaju", "SE", 920, 433),
-    VITORIA("Vitória", "ES", 835, 652),
+    VITORIA("Vitória", "ES", 832, 660),
     GOIANIA("Goiânia", "GO", 616, 570),
     CUIABA("Cuiabá", "MT", 459, 540),
     CAMPO_GRANDE("Campo Grande", "MS", 490, 670),
