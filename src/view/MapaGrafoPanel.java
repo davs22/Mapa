@@ -16,12 +16,11 @@ public class MapaGrafoPanel extends JPanel {
     private List<Capital> caminhoCompleto;
     private final List<Capital> caminhoAnimado = new ArrayList<>();
 
-    private ActionListener fimAnimacaoListener; // listener para fim da animação
+    private ActionListener fimAnimacaoListener; 
 
     public MapaGrafoPanel(Grafo grafo) {
         this.grafo = grafo;
-        // Certifique-se de que o caminho da imagem está correto
-        // Pode ser útil imprimir System.getProperty("user.dir") para verificar o diretório de execução
+        
         imagemFundo = new ImageIcon("resources/mapa.jpg").getImage();
     }
 
@@ -31,13 +30,10 @@ public class MapaGrafoPanel extends JPanel {
         g.drawImage(imagemFundo, 0, 0, getWidth(), getHeight(), this);
 
         Graphics2D g2 = (Graphics2D) g;
-        g2.setStroke(new BasicStroke(2)); // Linhas mais grossas para melhor visibilidade
-
+        g2.setStroke(new BasicStroke(2)); 
         int width = getWidth();
         int height = getHeight();
 
-        // Desenhar caminho animado
-        // Use a cor verde para as linhas do caminho também
         g2.setColor(Color.GREEN);
         for (int i = 0; i < caminhoAnimado.size() - 1; i++) {
             Capital c1 = caminhoAnimado.get(i);
@@ -48,25 +44,22 @@ public class MapaGrafoPanel extends JPanel {
             );
         }
 
-        // Desenhar pontos das capitais
         for (Capital capital : Capital.values()) {
             int x = escalarX(capital.getX(), width);
             int y = escalarY(capital.getY(), height);
 
-            // Aumentar o tamanho do círculo para melhor visibilidade
-            int circleSize = 12; // De 10 para 12
+            int circleSize = 12; 
             int offset = circleSize / 2;
 
             if (caminhoAnimado.contains(capital)) {
-                g.setColor(Color.GREEN); // Ponto da capital no caminho
+                g.setColor(Color.GREEN); 
             } else {
-                g.setColor(Color.BLUE); // Ponto da capital fora do caminho
+                g.setColor(Color.BLUE); 
             }
 
             g.fillOval(x - offset, y - offset, circleSize, circleSize);
             g.setColor(Color.BLACK);
-            // Opcional: desenhar a sigla da capital para depuração, se quiser
-            // g.drawString(capital.getSigla(), x + offset + 2, y - offset + 5);
+            
         }
     }
 
@@ -85,9 +78,8 @@ public class MapaGrafoPanel extends JPanel {
     public void animarCaminho(List<Capital> caminho) {
         this.caminhoCompleto = caminho;
         this.caminhoAnimado.clear();
-        repaint(); // Limpa visualmente antes de iniciar a nova animação
+        repaint(); 
 
-        // Se o caminho for nulo ou vazio, não inicie o timer
         if (caminhoCompleto == null || caminhoCompleto.isEmpty()) {
             if (fimAnimacaoListener != null) {
                 fimAnimacaoListener.actionPerformed(null);
@@ -95,21 +87,21 @@ public class MapaGrafoPanel extends JPanel {
             return;
         }
 
-        Timer timer = new Timer(500, null); // 500ms de delay por passo
+        Timer timer = new Timer(500, null); 
         final int[] index = {0};
 
         timer.addActionListener(e -> {
             if (index[0] < caminhoCompleto.size()) {
                 caminhoAnimado.add(caminhoCompleto.get(index[0]));
                 index[0]++;
-                repaint(); // Solicita redesenho a cada passo da animação
+                repaint(); 
             } else {
-                // A animação terminou
+               
                 ((Timer) e.getSource()).stop();
-                // GARANTIA: Um repaint final para mostrar o estado completo
-                repaint(); // <-- ESSA É A LINHA CRUCIAL ADICIONADA/REAFIRMADA
+                
+                repaint(); 
                 if (fimAnimacaoListener != null) {
-                    fimAnimacaoListener.actionPerformed(null); // avisa fim para o Executor
+                    fimAnimacaoListener.actionPerformed(null); 
                 }
             }
         });
