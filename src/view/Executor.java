@@ -48,7 +48,7 @@ public class Executor {
         grafo.adicionarAresta(Capital.SALVADOR, Capital.RECIFE, 950); // Aumentado de 840 para forçar rota costeira (870km)
 
         grafo.adicionarAresta(Capital.BELO_HORIZONTE, Capital.SALVADOR, 1370);
-        grafo.adicionarAresta(Capital.BELO_HORIZONTE, Capital.MACEIO, 1600); // Rota direta plausível (BR-101)
+        grafo.adicionarAresta(Capital.BELO_HORIZONTE, Capital.MACEIO, 2100); // penaliza o caminho direto
         grafo.adicionarAresta(Capital.TERESINA, Capital.SALVADOR, 1000); // Teresina-Salvador
 
         // Região Centro-Oeste
